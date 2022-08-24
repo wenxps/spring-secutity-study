@@ -12,6 +12,7 @@
         <module>security</module>
         <module>security-mybatis</module>
         <module>security-dynamic</module>
+        <module>security-auth2</module>
     </modules>
 
     <properties>
