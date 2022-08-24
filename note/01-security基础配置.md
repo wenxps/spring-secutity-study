@@ -1,3 +1,10 @@
+title: Spring Security 基本配置
+cover: /gallery/covers/cover.jpg
+categories: spring-boot spring-security
+date: '2022-08-23 18:05:01'
+
+---
+
 ## 1.新建项目
 
 首先新建一个 Spring Boot 项目，创建时引入 Spring Security 依赖和 web 依赖
