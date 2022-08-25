@@ -1,6 +1,7 @@
 package com.wenx.security.authentication.provider.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -50,6 +51,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return manager;
     }
 
+    @Autowired
+    MyWebAuthenticationDetailsSource myWebAuthenticationDetailsSource;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
@@ -57,6 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
                 .successHandler((req, resp, auth) -> {
                     resp.setContentType("application/json;charset=utf-8");
                     PrintWriter out = resp.getWriter();
