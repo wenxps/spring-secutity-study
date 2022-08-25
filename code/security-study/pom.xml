@@ -16,6 +16,7 @@
         <module>security-json</module>
         <module>security-jwt</module>
         <module>security-rememberme</module>
+        <module>security-authentication-provider</module>
     </modules>
 
     <properties>
