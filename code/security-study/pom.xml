@@ -15,6 +15,7 @@
         <module>security-auth2</module>
         <module>security-json</module>
         <module>security-jwt</module>
+        <module>security-rememberme</module>
     </modules>
 
     <properties>
